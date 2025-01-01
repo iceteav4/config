@@ -1,0 +1,11 @@
+{
+    "python.defaultInterpreterPath": "/home/tuanvinh08/.cache/pypoetry/virtualenvs/blpt-musicmonster-backend-ge1VwP-6-py3.11/bin/python",
+    "python.analysis.extraPaths": [
+        "src"
+    ],
+    "python.analysis.include": [
+        "src"
+    ],
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": false,
+}

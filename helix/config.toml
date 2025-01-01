@@ -1,0 +1,24 @@
+theme = "monokai_pro"
+
+[editor]
+idle-timeout = 50
+mouse = false
+auto-completion = true
+# copilot-auto-render = false # defaults to true if omitted
+[editor.file-picker]
+git-ignore = false
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+# [editor.lsp]
+# display-inlay-hints = true
+# auto-signature-help = true
+
+[keys.normal]
+"C-v" = "copilot_toggle_auto_render"
+
+[keys.insert]
+j = { k = "normal_mode" }
+"C-w" = "copilot_apply_completion"
+"C-v" = "copilot_show_completion"

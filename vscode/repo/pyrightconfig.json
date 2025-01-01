@@ -1,0 +1,15 @@
+{
+	"venvPath": "",
+	"venv": "",
+	"reportDeprecated": "warning",
+	"reportOptionalMemberAccess": false,
+	"reportGeneralTypeIssues": false,
+	"reportOptionalSubscript": false,
+	"reportPrivateImportUsage": false,
+	"reportInvalidTypeForm": false,
+	"typeCheckingMode": "off",
+	"useLibraryCodeForTypes": true,
+	"extraPaths": [
+		"src"
+	]
+}

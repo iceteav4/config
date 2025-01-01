@@ -1,0 +1,53 @@
+[language-server.copilot]
+command = "copilot"
+args = ["--stdio"]
+
+[[language]]
+name = "python"
+roots = ["pyproject.toml", "pyrightconfig.json"]
+language-servers = ["pyright"]
+auto-format = true
+formatter = { command = "bash", args = [
+  "-c",
+  "autoflake --in-place --remove-all-unused-imports -| autopep8 --aggressive --aggressive --max-line-length=120 -",
+] }
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+[language-server.ruff]
+command = "ruff-lsp"
+config = {}
+
+[[language]]
+name = "toml"
+auto-format = true
+formatter = { command = "taplo", args = ["fmt", "-"] }
+
+[[language]]
+name = "rust"
+auto-format = true
+roots = ["Cargo.toml", "Cargo.lock"]
+language-servers = ["rust-analyzer"]
+formatter = { command = "rustfmt", args = ["--edition", "2021"] }
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[[language]]
+name = "json"
+auto-format = true
+# roots = ["Cargo.toml", "Cargo.lock"]
+language-servers = ["vscode-json-languageserver"]
+formatter = { command = "biome", args = [
+  "format",
+  "--stdin-file-path=output.json",
+] }
+[language-server.vscode-json-languageserver]
+command = "vscode-json-languageserver"
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
