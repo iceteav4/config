@@ -1,21 +1,19 @@
 {
     "window.menuBarVisibility": "compact",
     "editor.fontFamily": "Inconsolata",
-    "editor.fontSize": 17,
-    "terminal.integrated.fontSize": 17,
+    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 16,
     "terminal.integrated.defaultProfile.linux": "fish",
     "workbench.colorTheme": "One Dark Pro",
     "security.workspace.trust.untrustedFiles": "open",
     "git.confirmSync": false,
     "git.autofetch": true,
     "explorer.confirmDelete": false,
-    "autopep8.args": [
-        "--max-line-length=120",
-        "--aggressive",
-        "--aggressive"
-    ],
     "extensions.ignoreRecommendations": true,
     "window.zoomLevel": 2,
     "python.defaultInterpreterPath": "/usr/bin/python3",
-    "workbench.sideBar.location": "right"
+    "workbench.sideBar.location": "right",
+    "files.exclude": {
+        "**/__pycache__": true
+    }
 }

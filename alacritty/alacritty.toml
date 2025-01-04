@@ -2,7 +2,7 @@
 normal = { family = "Inconsolata", style = "Regular" }
 bold = { family = "Inconsolata", style = "Regular" }
 size = 18
-[shell]
+[terminal.shell]
 program = "/usr/bin/fish"
 [window]
 option_as_alt = "Both"

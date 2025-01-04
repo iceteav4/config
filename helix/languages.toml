@@ -1,7 +1,3 @@
-[language-server.copilot]
-command = "copilot"
-args = ["--stdio"]
-
 [[language]]
 name = "python"
 roots = ["pyproject.toml", "pyrightconfig.json"]
