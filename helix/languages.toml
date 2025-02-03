@@ -3,9 +3,13 @@ name = "python"
 roots = ["pyproject.toml", "pyrightconfig.json"]
 language-servers = ["pyright"]
 auto-format = true
+# formatter = { command = "bash", args = [
+#   "-c",
+#   "autoflake --in-place --remove-all-unused-imports -| autopep8 --aggressive --aggressive --max-line-length=120 -",
+# ] }
 formatter = { command = "bash", args = [
   "-c",
-  "autoflake --in-place --remove-all-unused-imports -| autopep8 --aggressive --aggressive --max-line-length=120 -",
+  "ruff check - --fix -n | ruff format -",
 ] }
 [language-server.pyright]
 command = "pyright-langserver"

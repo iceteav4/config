@@ -13,3 +13,11 @@ pnpm add -g @biomejs/biome
 ```sh
 pnpm add -g vscode-json-languageserver
 ```
+## Ruff
+```sh
+pipx install ruff
+```
+## Pyright
+```sh
+pipx install pyright
+```
