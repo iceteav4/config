@@ -1,9 +1,9 @@
 {
-    "window.menuBarVisibility": "compact",
     "editor.fontFamily": "Inconsolata",
     "editor.fontSize": 16,
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.defaultProfile.osx": "fish",
     "workbench.colorTheme": "One Dark Pro",
     "security.workspace.trust.untrustedFiles": "open",
     "git.confirmSync": false,
