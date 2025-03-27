@@ -1,4 +1,4 @@
-theme = "monokai_pro"
+theme = "monokai_aqua"
 
 [editor]
 idle-timeout = 50
@@ -16,9 +16,15 @@ select = "underline"
 # auto-signature-help = true
 
 [keys.normal]
-"C-v" = "copilot_toggle_auto_render"
+"A-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+"A-k" = [
+    "extend_to_line_bounds",
+    "delete_selection",
+    "move_line_up",
+    "paste_before",
+]
 
 [keys.insert]
 j = { k = "normal_mode" }
-"C-w" = "copilot_apply_completion"
-"C-v" = "copilot_show_completion"
+# "C-w" = "copilot_apply_completion"
+# "C-v" = "copilot_show_completion"
