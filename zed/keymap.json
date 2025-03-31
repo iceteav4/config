@@ -17,16 +17,24 @@
     }
   },
   {
+    "context": "Workspace",
+    "bindings": {
+      "v": "vim::SwitchToVisualMode",
+      "ctrl-alt-l": "workspace::ToggleLeftDock",
+      "ctrl-alt-r": "workspace::ToggleRightDock"
+    }
+  },
+  {
     "context": "Editor && vim_mode == helix_normal && !menu",
     "bindings": {
       "v": "vim::SwitchToVisualMode"
     }
   },
   {
-    "context": "Editor && vim_mode != helix_normal && !VimWaiting",
+    "context": "Editor && (vim_mode != helix_normal || vim_mode != visual) && !VimWaiting",
     "bindings": {
       "escape": "vim::SwitchToHelixNormalMode",
-      "j k": "vim::SwitchToHelixNormalMode"
+      "ctrl-j": "vim::SwitchToHelixNormalMode"
       // "escape": ["vim::HelixNormalAfter"]
     }
   },
@@ -38,18 +46,23 @@
       "b": "vim::PreviousWordStart",
       "/": "vim::Search",
       "%": "editor::SelectAll",
-      "y": "vim::VisualYank",
+      "y": "vim::Yank",
       "p": "vim::Paste",
       "o": "vim::InsertLineBelow",
       "O": "vim::InsertLineAbove",
       "x": "editor::SelectLine",
       "u": "vim::Undo",
-      "c": [
-        "workspace::SendKeystrokes",
-        "d i"
-      ],
+      "i": "vim::InsertBefore",
+      "I": ["workspace::SendKeystrokes", "g h i"],
+      "a": "vim::InsertAfter",
+      "A": "vim::InsertEndOfLine",
+      "R": "vim::PushReplace",
+      "c": ["workspace::SendKeystrokes", "d i"],
       ">": "editor::Tab",
       "<": "editor::Backtab",
+      // Alt
+      "alt-d": "vim::VisualDelete",
+      // Ctrl
       "ctrl-f": "vim::PageDown",
       "ctrl-b": "vim::PageUp",
       "ctrl-o": "pane::GoBack",
@@ -57,7 +70,6 @@
       "ctrl-d": "vim::ScrollDown",
       "ctrl-u": "vim::ScrollUp",
       "ctrl-l": "vim::DeleteToEndOfLine",
-      "ctrl-k": "vim::DeleteToEndOfLine",
       "ctrl-A": "editor::ConvertToUpperCase",
       // "g" commands
       "g a": "tab_switcher::Toggle",
@@ -100,25 +112,8 @@
       "ctrl-i": "pane::GoForward",
       "ctrl-u": "editor::DeleteToBeginningOfLine",
       "ctrl-l": "vim::DeleteToEndOfLine",
-      "ctrl-k": "vim::DeleteToEndOfLine",
       "ctrl-w": "editor::DeleteToPreviousWordStart",
       "alt-d": "editor::DeleteToNextWordEnd"
     }
   }
-  // {
-  //   "context": "Editor && vim_mode == visual",
-  //   "bindings": {
-  //     "ctrl-f": "vim::PageDown",
-  //     "ctrl-b": "vim::PageUp",
-  //     "ctrl-o": "pane::GoBack",
-  //     "ctrl-i": "pane::GoForward",
-  //     "ctrl-u": "vim::ScrollUp",
-  //     // "g" commands
-  //     "g g": "vim::StartOfDocument",
-  //     "g d": "editor::GoToDefinition",
-  //     "g e": "editor::MoveToEnd",
-  //     "g h": "vim::StartOfLine",
-  //     "g l": "vim::EndOfLine"
-  //   }
-  // }
 ]

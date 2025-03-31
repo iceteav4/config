@@ -1,0 +1,8 @@
+{
+	"formatter": {
+		"lineWidth": 120,
+		"json":{
+			"array_prefer_single_line": true
+		}
+	}
+}
