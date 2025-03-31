@@ -19,7 +19,6 @@
   {
     "context": "Workspace",
     "bindings": {
-      "v": "vim::SwitchToVisualMode",
       "ctrl-alt-l": "workspace::ToggleLeftDock",
       "ctrl-alt-r": "workspace::ToggleRightDock"
     }
@@ -46,7 +45,7 @@
       "b": "vim::PreviousWordStart",
       "/": "vim::Search",
       "%": "editor::SelectAll",
-      "y": "vim::Yank",
+      "y": "vim::VisualYank",
       "p": "vim::Paste",
       "o": "vim::InsertLineBelow",
       "O": "vim::InsertLineAbove",
@@ -62,6 +61,8 @@
       "<": "editor::Backtab",
       // Alt
       "alt-d": "vim::VisualDelete",
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
       // Ctrl
       "ctrl-f": "vim::PageDown",
       "ctrl-b": "vim::PageUp",
@@ -110,6 +111,7 @@
       "ctrl-b": "vim::PageUp",
       "ctrl-o": "pane::GoBack",
       "ctrl-i": "pane::GoForward",
+      "ctrl-v": "editor::Paste",
       "ctrl-u": "editor::DeleteToBeginningOfLine",
       "ctrl-l": "vim::DeleteToEndOfLine",
       "ctrl-w": "editor::DeleteToPreviousWordStart",
