@@ -73,6 +73,12 @@
   },
   // Language server configuration
   "lsp": {
+    "pyright": {
+      "binary": {
+        "path": "/home/iceteav4/.local/bin/pyright-langserver",
+        "arguments": ["--stdio"]
+      }
+    },
     "biome": {
       "settings": {
         "config_path": "~/.config/biome/biome.json"

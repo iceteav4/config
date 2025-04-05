@@ -70,8 +70,9 @@
       "ctrl-i": "pane::GoForward",
       "ctrl-d": "vim::ScrollDown",
       "ctrl-u": "vim::ScrollUp",
-      "ctrl-l": "vim::DeleteToEndOfLine",
+      "ctrl-l": "editor::DeleteToEndOfLine",
       "ctrl-A": "editor::ConvertToUpperCase",
+      "ctrl-x": "editor::ShowCompletions",
       // "g" commands
       "g a": "tab_switcher::Toggle",
       "g e": "editor::MoveToEnd",
@@ -113,7 +114,7 @@
       "ctrl-i": "pane::GoForward",
       "ctrl-v": "editor::Paste",
       "ctrl-u": "editor::DeleteToBeginningOfLine",
-      "ctrl-l": "vim::DeleteToEndOfLine",
+      "ctrl-l": "editor::DeleteToEndOfLine",
       "ctrl-w": "editor::DeleteToPreviousWordStart",
       "alt-d": "editor::DeleteToNextWordEnd"
     }
