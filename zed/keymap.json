@@ -40,6 +40,7 @@
   {
     "context": "Editor && (vim_mode == helix_normal || vim_mode == visual)",
     "bindings": {
+      "escape": "editor::Cancel",
       "w": "vim::NextWordStart",
       "e": "vim::NextWordEnd",
       "b": "vim::PreviousWordStart",
@@ -54,6 +55,7 @@
       "i": "vim::InsertBefore",
       "I": ["workspace::SendKeystrokes", "g h i"],
       "a": "vim::InsertAfter",
+      "d": "vim::HelixDelete",
       "A": "vim::InsertEndOfLine",
       "R": "vim::PushReplace",
       "c": ["workspace::SendKeystrokes", "d i"],
