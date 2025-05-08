@@ -17,7 +17,7 @@
     }
   },
   {
-    "context": "Workspace",
+    "context": "Workspace && os==linux",
     "bindings": {
       "ctrl-alt-l": "workspace::ToggleLeftDock",
       "ctrl-alt-r": "workspace::ToggleRightDock"
@@ -78,6 +78,7 @@
       "ctrl-c": "editor::Copy",
       "ctrl-v": "editor::Paste",
       "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-s": "workspace::Save",
       // "g" commands
       "g a": "tab_switcher::Toggle",
       "g e": "editor::MoveToEnd",
@@ -112,6 +113,7 @@
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
+      "ctrl-s": "workspace::Save",
       "ctrl-x": "editor::ShowCompletions",
       "ctrl-f": "vim::PageDown",
       "ctrl-b": "vim::PageUp",

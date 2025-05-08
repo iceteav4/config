@@ -7,12 +7,13 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "supermaven"
   },
-  "assistant": {
+  "agent": {
+    "default_profile": "write",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "provider": "ollama",
+      "model": "qwen2.5-coder:14b"
     },
     "version": "2"
   },
@@ -20,25 +21,34 @@
     "dock": "right"
   },
   "vim_mode": true,
+  "vim": {
+    "default_mode": "helix_normal",
+    "cursor_shape": {
+      "normal": "hollow",
+      "insert": "bar",
+      "replace": "block",
+      "visual": "underline"
+    }
+  },
   "format_on_save": "on",
-  "ui_font_size": 23,
+  "ui_font_size": 24,
   // "ui_font_family": "Inconsolata",
   "buffer_font_family": "Inconsolata",
-  "buffer_font_size": 23,
+  "buffer_font_size": 24,
   "theme": {
     "mode": "system",
     "light": "One Light",
     "dark": "One Dark"
+  },
+  "code_actions_on_format": {
+    "source.removeUnusedImports": true
   },
   "terminal": {
     "shell": {
       "program": "fish"
     },
     "font_family": "Inconsolata",
-    "font_size": 21
-  },
-  "vim": {
-    "default_mode": "helix_normal"
+    "font_size": 23
   },
   // Language configuration
   "languages": {

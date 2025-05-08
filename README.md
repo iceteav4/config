@@ -35,6 +35,12 @@ fish_add_path ~/.local/share/pnpm
 pnpm add -g @biomejs/biome
 ```
 
+## Taplo formatter
+
+```sh
+cargo install taplo-cli --features=lsp
+```
+
 ## VSCode JSON Language Server
 
 ```sh
