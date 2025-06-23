@@ -1,3 +1,4 @@
+// Zed settings
 //
 // For information on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
@@ -6,16 +7,19 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "features": {
-    "edit_prediction_provider": "supermaven"
-  },
   "agent": {
-    "default_profile": "write",
-    "default_model": {
-      "provider": "ollama",
-      "model": "qwen2.5-coder:14b"
-    },
+    "model_parameters": [],
+    "default_profile": "ask",
     "version": "2"
+  },
+  "ui_font_size": 23,
+  "buffer_font_size": 23,
+  "buffer_font_family": "Inconsolata",
+  "agent_font_size": 25,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Zedokai"
   },
   "project_panel": {
     "dock": "right"
@@ -31,15 +35,6 @@
     }
   },
   "format_on_save": "on",
-  "ui_font_size": 24,
-  // "ui_font_family": "Inconsolata",
-  "buffer_font_family": "Inconsolata",
-  "buffer_font_size": 24,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
-  },
   "code_actions_on_format": {
     "source.removeUnusedImports": true
   },
@@ -49,50 +44,5 @@
     },
     "font_family": "Inconsolata",
     "font_size": 23
-  },
-  // Language configuration
-  "languages": {
-    "Python": {
-      "language_servers": ["pyright", "ruff"],
-      "format_on_save": "on",
-      "formatter": [
-        {
-          "code_actions": {
-            "source.organizeImports.ruff": true,
-            "source.fixAll.ruff": true
-          }
-        },
-        {
-          "language_server": {
-            "name": "ruff"
-          }
-        }
-      ]
-    },
-    "JSON": {
-      "language_servers": ["biome"],
-      "format_on_save": "on",
-      "formatter": [
-        {
-          "language_server": {
-            "name": "biome"
-          }
-        }
-      ]
-    }
-  },
-  // Language server configuration
-  "lsp": {
-    "pyright": {
-      "binary": {
-        "path": "/home/iceteav4/.local/bin/pyright-langserver",
-        "arguments": ["--stdio"]
-      }
-    },
-    "biome": {
-      "settings": {
-        "config_path": "~/.config/biome/biome.json"
-      }
-    }
   }
 }

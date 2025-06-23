@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Cursor AI Editor
+Exec=/usr/local/bin/cursor.AppImage --no-sandbox
+Icon=/home/iceteav4/.local/share/icons/Cursor.svg
+Type=Application
+Terminal=false
+Categories=Development;IDE;

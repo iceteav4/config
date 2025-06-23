@@ -1,0 +1,7 @@
+{
+  "python.defaultInterpreterPath": "python",
+  "python.analysis.extraPaths": ["src"],
+  "python.analysis.include": ["src"],
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": false
+}

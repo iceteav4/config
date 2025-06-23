@@ -1,19 +1,24 @@
 {
-    "editor.fontFamily": "Inconsolata",
-    "editor.fontSize": 16,
-    "terminal.integrated.fontSize": 16,
-    "terminal.integrated.defaultProfile.linux": "fish",
-    "terminal.integrated.defaultProfile.osx": "fish",
-    "workbench.colorTheme": "One Dark Pro",
-    "security.workspace.trust.untrustedFiles": "open",
-    "git.confirmSync": false,
-    "git.autofetch": true,
-    "explorer.confirmDelete": false,
-    "extensions.ignoreRecommendations": true,
-    "window.zoomLevel": 2,
-    "python.defaultInterpreterPath": "/usr/bin/python3",
-    "workbench.sideBar.location": "right",
-    "files.exclude": {
-        "**/__pycache__": true
-    }
+  "window.commandCenter": true,
+  "workbench.colorTheme": "One Monokai Python",
+  "editor.fontFamily": "Inconsolata",
+  "editor.fontSize": 16,
+  "editor.formatOnSaveMode": "file",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "explorer.confirmDelete": false,
+  "extensions.ignoreRecommendations": true,
+  "window.zoomLevel": 2,
+  "workbench.sideBar.location": "right",
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  }
 }

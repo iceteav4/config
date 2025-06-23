@@ -1,0 +1,81 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "cwd": "${workspaceFolder}/src"
+    },
+    {
+      "name": "public_api",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["apps.apis.public_api.app:app", "--port", "8000"],
+      "consoleTitle": "public_api",
+      "jinja": true,
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "cwd": "${workspaceFolder}/src"
+    },
+    {
+      "name": "admin_api",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["apps.apis.admin_api.app:app", "--port", "8080"],
+      "consoleTitle": "admin_api",
+      "jinja": true,
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "cwd": "${workspaceFolder}/src"
+    },
+    {
+      "name": "internal_business",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "apps.workers.internal_business.internal_business_worker:app",
+        "--port",
+        "8001"
+      ],
+      "consoleTitle": "internal_business",
+      "jinja": true,
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "cwd": "${workspaceFolder}/src"
+    },
+    {
+      "name": "tool_scheduler",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "apps.workers.tool_scheduler.tool_scheduler_worker:app",
+        "--port",
+        "8002"
+      ],
+      "consoleTitle": "tool_scheduler",
+      "jinja": true,
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "cwd": "${workspaceFolder}/src"
+    }
+  ]
+}

@@ -47,16 +47,20 @@ cargo install taplo-cli --features=lsp
 pnpm add -g vscode-json-languageserver
 ```
 
-## Ruff
+## uv
+
+An extremely fast Python package and project manager, written in Rust. (https://docs.astral.sh/uv/)
 
 ```sh
-pipx install ruff
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-## Pyright
+Tools for Python development
 
 ```sh
-pipx install pyright
+uv tool install poetry
+uv tool install ruff
+uv tool install pyright
 ```
 
 ## Starship
