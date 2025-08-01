@@ -7,10 +7,16 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
   "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet"
+    },
     "model_parameters": [],
-    "default_profile": "ask",
-    "version": "2"
+    "default_profile": "ask"
   },
   "ui_font_size": 23,
   "buffer_font_size": 23,
@@ -24,6 +30,7 @@
   "project_panel": {
     "dock": "right"
   },
+  "helix_mode": true,
   "vim_mode": true,
   "vim": {
     "default_mode": "helix_normal",

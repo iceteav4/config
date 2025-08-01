@@ -2,6 +2,7 @@
   "python.defaultInterpreterPath": "python",
   "python.analysis.extraPaths": ["src"],
   "python.analysis.include": ["src"],
+  "python.analysis.exclude": [".venv"],
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": false
 }
