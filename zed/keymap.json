@@ -47,10 +47,7 @@
   {
     "context": "Editor && (vim_mode != helix_normal || vim_mode != visual) && !VimWaiting",
     "bindings": {
-      "escape": "vim::SwitchToHelixNormalMode",
-      "ctrl-j": "vim::SwitchToHelixNormalMode",
-      "f g": "vim::SwitchToHelixNormalMode"
-      // "escape": ["vim::HelixNormalAfter"]
+      "escape": "vim::SwitchToHelixNormalMode"
     }
   },
   {
@@ -79,8 +76,8 @@
       // "<": "editor::Backtab",
       // Alt
       // "alt-d": "vim::VisualDelete",
-      // "alt-j": "editor::MoveLineDown",
-      // "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
       // Ctrl
       // "ctrl-f": "vim::PageDown",
       // "ctrl-b": "vim::PageUp",
@@ -88,7 +85,7 @@
       // "ctrl-i": "pane::GoForward",
       // "ctrl-d": "vim::ScrollDown",
       // "ctrl-u": "vim::ScrollUp",
-      // "ctrl-L": "editor::DeleteToEndOfLine",
+      "ctrl-L": "editor::DeleteToEndOfLine",
       // "ctrl-A": "editor::ConvertToUpperCase",
       "ctrl-x": "editor::ShowCompletions",
       "ctrl-c": "editor::Copy",
@@ -96,12 +93,12 @@
       "ctrl-w": "pane::CloseActiveItem",
       // "ctrl-s": "workspace::Save",
       // "g" commands
-      // "g a": "tab_switcher::Toggle",
+      "g a": "tab_switcher::Toggle",
       // "g e": "editor::MoveToEnd",
       // "g g": "vim::StartOfDocument",
       // "g d": "editor::GoToDefinition",
       // "g h": "vim::StartOfLine",
-      // "g l": "vim::EndOfLine",
+      "g l": "vim::EndOfLine",
       // "g r": "editor::FindAllReferences",
       // "g t": "go_to_line::Toggle",
       // "g y": "editor::GoToDefinition",
@@ -129,6 +126,7 @@
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
+      "j k": "vim::SwitchToHelixNormalMode",
       "ctrl-s": "workspace::Save",
       "ctrl-c": "editor::Copy",
       //     "ctrl-x": "editor::ShowCompletions",
@@ -136,9 +134,9 @@
       //     "ctrl-b": "vim::PageUp",
       //     "ctrl-o": "pane::GoBack",
       //     "ctrl-i": "pane::GoForward",
-      "ctrl-v": "editor::Paste"
+      "ctrl-v": "editor::Paste",
       //     "ctrl-u": "editor::DeleteToBeginningOfLine",
-      //     "ctrl-L": "editor::DeleteToEndOfLine",
+      "ctrl-L": "editor::DeleteToEndOfLine"
       //     "alt-d": "editor::DeleteToNextWordEnd"
     }
   }

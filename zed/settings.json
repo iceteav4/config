@@ -8,15 +8,16 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "zed"
   },
   "agent": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-7-sonnet"
+      "model": "claude-sonnet-4"
     },
     "model_parameters": [],
-    "default_profile": "ask"
+    "default_profile": "ask",
+    "dock": "left"
   },
   "ui_font_size": 23,
   "buffer_font_size": 23,
@@ -51,5 +52,29 @@
     },
     "font_family": "Inconsolata",
     "font_size": 23
+  },
+  "lsp": {
+    "pyright": {
+      "binary": {
+        "path": "pyright-langserver",
+        "arguments": ["--stdio"]
+      }
+    },
+    "ruff-lsp": {
+      "binary": {
+        "path": "ruff-lsp"
+      }
+    }
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff-lsp"],
+      "formatter": {
+        "external": {
+          "command": "bash",
+          "arguments": ["-c", "ruff check - --fix -n | ruff format -"]
+        }
+      }
+    }
   }
 }

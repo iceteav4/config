@@ -1,0 +1,68 @@
+[
+  {
+    "label": "Python Active File",
+    "adapter": "Debugpy",
+    "program": "$ZED_FILE",
+    "request": "launch",
+    "env": {
+      "PYTHONPATH": "$ZED_WORKTREE_ROOT/src"
+    },
+    "cwd": "${ZED_WORKTREE_ROOT}/src"
+  },
+  {
+    "label": "public_api",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "module": "uvicorn",
+    "justMyCode": true,
+    "args": ["apps.apis.public_api.app:app", "--port", "8000"],
+    "env": {
+      "PYTHONPATH": "$ZED_WORKTREE_ROOT/src"
+    },
+    "cwd": "${ZED_WORKTREE_ROOT}/src"
+  },
+  {
+    "label": "admin_api",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "module": "uvicorn",
+    "justMyCode": true,
+    "args": ["apps.apis.admin_api.app:app", "--port", "8080"],
+    "env": {
+      "PYTHONPATH": "$ZED_WORKTREE_ROOT/src"
+    },
+    "cwd": "${ZED_WORKTREE_ROOT}/src"
+  },
+  {
+    "label": "ibw",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "module": "uvicorn",
+    "justMyCode": true,
+    "args": [
+      "apps.workers.internal_business.internal_business_worker:app",
+      "--port",
+      "8001"
+    ],
+    "env": {
+      "PYTHONPATH": "$ZED_WORKTREE_ROOT/src"
+    },
+    "cwd": "${ZED_WORKTREE_ROOT}/src"
+  },
+  {
+    "label": "scheduler",
+    "adapter": "Debugpy",
+    "request": "launch",
+    "module": "uvicorn",
+    "justMyCode": true,
+    "args": [
+      "apps.workers.tool_scheduler.tool_scheduler_worker:app",
+      "--port",
+      "8002"
+    ],
+    "env": {
+      "PYTHONPATH": "$ZED_WORKTREE_ROOT/src"
+    },
+    "cwd": "${ZED_WORKTREE_ROOT}/src"
+  }
+]
