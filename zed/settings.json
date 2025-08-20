@@ -26,9 +26,15 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Zedokai"
+    "dark": "Zedokai Classic"
   },
   "project_panel": {
+    "dock": "right"
+  },
+  "debugger": {
+    "dock": "right"
+  },
+  "git_panel": {
     "dock": "right"
   },
   "helix_mode": true,
