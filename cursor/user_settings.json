@@ -1,24 +1,39 @@
 {
-  "window.commandCenter": true,
-  "workbench.colorTheme": "One Monokai Python",
+  "window.menuBarVisibility": "classic",
   "editor.fontFamily": "Inconsolata",
   "editor.fontSize": 16,
-  "editor.formatOnSaveMode": "file",
   "terminal.integrated.fontSize": 16,
-  "terminal.integrated.defaultProfile.linux": "fish",
-  "terminal.integrated.defaultProfile.osx": "fish",
+  "workbench.colorTheme": "One Monokai Python",
   "security.workspace.trust.untrustedFiles": "open",
   "git.confirmSync": false,
   "git.autofetch": true,
   "explorer.confirmDelete": false,
   "extensions.ignoreRecommendations": true,
-  "window.zoomLevel": 2,
+  "python.defaultInterpreterPath": "/usr/bin/python3",
   "workbench.sideBar.location": "right",
   "files.exclude": {
     "**/__pycache__": true
   },
-  "editor.formatOnSave": true,
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
-  }
+  },
+  "extensions.experimental.affinity": {
+    "jasew.vscode-helix-emulation": 1
+  },
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "explorer.confirmDragAndDrop": false,
+  "window.zoomLevel": 2,
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "ty.disableLanguageServices": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "editor.formatOnSave": true
 }

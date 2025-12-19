@@ -7,13 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Material Icon Theme",
   "features": {
     "edit_prediction_provider": "zed"
   },
   "agent": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
     },
     "model_parameters": [],
     "default_profile": "ask",
@@ -22,11 +23,12 @@
   "ui_font_size": 23,
   "buffer_font_size": 23,
   "buffer_font_family": "Inconsolata",
-  "agent_font_size": 25,
+  "agent_ui_font_size": 23,
+  "agent_buffer_font_size": 23,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Zedokai Classic"
+    "dark": "Zedokai"
   },
   "project_panel": {
     "dock": "right"
@@ -35,12 +37,13 @@
     "dock": "right"
   },
   "git_panel": {
+    "sort_by_path": true,
     "dock": "right"
   },
   "helix_mode": true,
   "vim_mode": true,
   "vim": {
-    "default_mode": "helix_normal",
+    "default_mode": "normal",
     "cursor_shape": {
       "normal": "hollow",
       "insert": "bar",
@@ -60,27 +63,36 @@
     "font_size": 23
   },
   "lsp": {
-    "pyright": {
+    "basedpyright": {
       "binary": {
-        "path": "pyright-langserver",
+        "path": "/home/iceteav4/.local/bin/basedpyright-langserver",
         "arguments": ["--stdio"]
       }
     },
-    "ruff-lsp": {
+    "ty": {
       "binary": {
-        "path": "ruff-lsp"
+        "path": "/home/iceteav4/.local/bin/ty",
+        "arguments": ["server"]
+      },
+      "settings": {
+        "disableLanguageServices": true,
+        "diagnosticMode": "openFilesOnly"
       }
     }
   },
   "languages": {
     "Python": {
-      "language_servers": ["pyright", "ruff-lsp"],
+      "language_servers": ["ty", "basedpyright", "..."],
       "formatter": {
         "external": {
           "command": "bash",
-          "arguments": ["-c", "ruff check - --fix -n | ruff format -"]
+          "arguments": [
+            "-c",
+            "ruff check - --fix -n | ruff format --line-length 120 -"
+          ]
         }
-      }
+      },
+      "preferred_line_length": 120
     }
   }
 }

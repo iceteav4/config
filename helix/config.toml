@@ -18,13 +18,14 @@ select = "underline"
 [keys.normal]
 "A-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 "A-k" = [
-    "extend_to_line_bounds",
-    "delete_selection",
-    "move_line_up",
-    "paste_before",
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
 ]
 
 [keys.insert]
 j = { k = "normal_mode" }
+"C-l" = "kill_to_line_end"
 # "C-w" = "copilot_apply_completion"
 # "C-v" = "copilot_show_completion"

@@ -85,7 +85,7 @@
       // "ctrl-i": "pane::GoForward",
       // "ctrl-d": "vim::ScrollDown",
       // "ctrl-u": "vim::ScrollUp",
-      "ctrl-L": "editor::DeleteToEndOfLine",
+      "ctrl-l": "editor::DeleteToEndOfLine",
       // "ctrl-A": "editor::ConvertToUpperCase",
       "ctrl-x": "editor::ShowCompletions",
       "ctrl-c": "editor::Copy",
@@ -129,6 +129,7 @@
       "j k": "vim::SwitchToHelixNormalMode",
       "ctrl-s": "workspace::Save",
       "ctrl-c": "editor::Copy",
+      "ctrl-x": "editor::Cut",
       //     "ctrl-x": "editor::ShowCompletions",
       //     "ctrl-f": "vim::PageDown",
       //     "ctrl-b": "vim::PageUp",
@@ -136,7 +137,7 @@
       //     "ctrl-i": "pane::GoForward",
       "ctrl-v": "editor::Paste",
       //     "ctrl-u": "editor::DeleteToBeginningOfLine",
-      "ctrl-L": "editor::DeleteToEndOfLine"
+      "ctrl-l": "editor::DeleteToEndOfLine"
       //     "alt-d": "editor::DeleteToNextWordEnd"
     }
   }
